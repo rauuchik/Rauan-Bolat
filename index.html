@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rauan Bolat - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .profile-img img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #555;
+        }
+        h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .buttons {
+            margin-top: 15px;
+        }
+        .buttons a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #ff0000, #0000ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .buttons a:hover {
+            opacity: 0.8;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info p:nth-child(odd) {
+            color: red;
+        }
+        .contact-info p:nth-child(even) {
+            color: blue;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .dark-mode .container {
+            background: #1e1e1e;
+        }
+        .dark-mode .buttons a {
+            background: linear-gradient(45deg, #4b6cb7, #182848);
+        }
+        .dark-mode .contact-info p:nth-child(odd) {
+            color: #ff4c4c;
+        }
+        .dark-mode .contact-info p:nth-child(even) {
+            color: #4c9aff;
+        }
+        .dark-mode .profile-img img {
+            border-color: #e0e0e0;
+        }
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+
+    <div class="container">
+        <!-- Картинка профиля -->
+        <div class="profile-img">
+            <img src="IMG_1651.jpeg" alt="Profile Image">
+        </div>
+
+        <!-- Текст профиля -->
+        <div>
+            <h1>Rauan Bolat</h1>
+            <p>15 years old | 10th grade | BIL (Bilim Innovation School)</p>
+            <p>Birthday: July 7, 2009</p>
+            <p>Future profession: Interior Designer</p>
+            <p>Height & Weight: 180 cm / 73 kg</p>
+            <p>Planning to study in: Italy | Preparing for IELTS</p>
+            <p><strong>Hobbies:</strong></p>
+            <ul>
+                <li>Playing video games</li>
+                <li>Going to the gym</li>
+                <li>Watching anime and TV series</li>
+                <li>Football</li>
+            </ul>
+            <p><strong>Strengths:</strong></p>
+            <ul>
+                <li>Creativity</li>
+                <li>Perseverance</li>
+                <li>Honesty</li>
+                <li>Confidence</li>
+                <li>Academic success</li>
+            </ul>
+
+            <div class="buttons">
+                <a href="#projects">My Projects</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Контактная инфа -->
+    <div class="container contact-info" id="contact">
+        <p>Phone: +7 707 522 04 07</p>
+        <p>Email: rauanbolat07@mail.ru</p>
+        <p><a href="https://youtube.com/@theoremsinacos?si=PmiFANnBy15E0n9Z" target="_blank">My YouTube channel</a></p>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
